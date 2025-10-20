@@ -33,6 +33,8 @@ Sie dienen als Referenz, wenn du den Schaltplan in KiCad weiter ausarbeitest ode
 7. **Design Rules** – Lege in KiCad passende Netzklassen fest (z. B. "Mains", "Power", "Logic") mit den jeweils benoetigten Leiterbahnbreiten und Clearance.
 8. **Sync zum PCB** – Wenn der Schaltplan fertig ist, aktualisiere das PCB (`Tools -> Update PCB from Schematic`) und beginne mit dem Routing.
 
+> Tipp: Solltest du die offiziellen KiCad-Symbole und -Footprints noch nicht lokal haben, kannst du das Skript `scripts/clone_kicad_libs.sh` verwenden, um sie aus den GitHub-Repositorys der KiCad-Organisation zu beziehen.
+
 ## Export nach Altium
 
 Fuer einen Wechsel zu Altium kannst du das KiCad-Projekt in KiCad 7 als `EDIF` exportieren (`Datei -> Exportieren -> Netliste -> EDIF`). Diese Netliste laesst sich in Altium Designer importieren und dort weiterbearbeiten.
