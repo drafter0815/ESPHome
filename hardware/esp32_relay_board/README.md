@@ -14,8 +14,8 @@ Dieses Verzeichnis enthaelt ein hierarchisches KiCad-6/7-Projekt als Ausgangspun
 ## Weiteres Vorgehen
 
 1. Oeffne `esp32_relay_board.kicad_pro` in KiCad 6 oder neuer.
-2. Fuege in den Unterblaettern die tatsaechlichen Bauteile aus den Bibliotheken hinzu.
+2. Folge den Hinweisen in `NOTES.md`, um Bauteile, Netznamen und Schutzbeschaltungen gezielt zu platzieren.
 3. Definiere die genauen Netzbezeichnungen und Steckverbinder entsprechend deiner Mechanik.
 4. Erstelle anschliessend ein neues PCB und synchronisiere das Netz aus dem Schaltplan.
 
-> Hinweis: Dieses Projekt enthaelt bewusst nur strukturierende Platzhalter, damit du schnell auf Basis der vorgegebenen Architektur weiterarbeiten kannst.
+> Hinweis: In dieser Umgebung laesst sich KiCad selbst nicht ausfuehren. Das bereitgestellte Projekt dient daher als sauber strukturierter Startpunkt, den du lokal in KiCad oder Altium weiterverarbeiten kannst.
