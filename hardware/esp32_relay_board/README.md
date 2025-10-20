@@ -6,6 +6,7 @@ Dieses Verzeichnis enthaelt ein hierarchisches KiCad-6/7-Projekt als Ausgangspun
 
 - `esp32_relay_board.kicad_pro` – Projektdatei zum Oeffnen in KiCad.
 - `esp32_relay_board.kicad_sch` – Haupthierarchie mit Unterblaettern.
+- `esp32_relay_board.kicad_pcb` – Visualisiertes Platzierungs-Layout als Orientierung fuer das Leiterplattendesign.
 - `power.kicad_sch` – Platzhalter fuer Netzteil- und Schutzbeschaltung.
 - `mcu_display.kicad_sch` – Platzhalter fuer ESP32, Display und Touch.
 - `relays.kicad_sch` – Platzhalter fuer Optokoppler- und Relaisstufe.

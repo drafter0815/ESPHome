@@ -45,5 +45,6 @@ Fuer einen Wechsel zu Altium kannst du das KiCad-Projekt in KiCad 7 als `EDIF` e
 - `mcu_display.kicad_sch`: ESP32, Touchdisplay, I2C-Bus.
 - `relays.kicad_sch`: 16-fach Relaistreiber.
 - `servo_i2c.kicad_sch`: PCA9685, Servoausgaenge und Versorgung.
+- `esp32_relay_board.kicad_pcb`: Platzierungs-Layout mit Board-Umriss, Zonenkennzeichnung und Textlabels fuer den mechanischen Aufbau.
 
 Diese Notizen sollen verhindern, dass Details aus dem vorherigen Chat verloren gehen, und erleichtern dir den direkten Einstieg in das KiCad-Projekt.
