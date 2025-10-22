@@ -1,0 +1,112 @@
+EESchema Schematic File Version 4
+LIBS:Connector_Generic
+LIBS:Driver_LED
+LIBS:power
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 5 5
+Title "Servo Controller"
+Comment1 "PCA9685 + Servosteckverbinder"
+$EndDescr
+Text Notes 2200 1400 0    118  ~ 0
+I2C PWM-Expander steuert vier Servomotoren.
+$Comp
+L Driver_LED:PCA9685PW U501
+U 1 1 6467006E
+P 4200 2600
+F 0 "U501" H 4200 3915 50  0000 C CNN
+F 1 "PCA9685PW" H 4200 3824 50  0000 C CNN
+F 2 "Package_SO:SSOP-28_5.3x10.2mm_P0.65mm" H 4200 1100 50  0001 C CNN
+F 3 "https://www.nxp.com/docs/en/data-sheet/PCA9685.pdf" H 4200 2600 50  0001 C CNN
+1    4200 2600
+1    0    0    -1
+$EndComp
+Text GLabel 3400 1600 0    50   Input ~ 0
+V3V3
+Text GLabel 3400 1700 0    50   Input ~ 0
+GND
+Text GLabel 3400 1900 0    50   BiDi ~ 0
+I2C_SCL
+Text GLabel 3400 2000 0    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 5000 1600 2    50   Input ~ 0
+V5_SERVO
+Text Notes 5200 1900 0    50   ~ 0
+Servos getrennt mit 5V versorgen; Bulk-Kondensator nahe J501.
+$Comp
+L Connector_Generic:Conn_01x03 J501
+U 1 1 64670392
+P 6800 2000
+F 0 "J501" H 6880 1992 50  0000 L CNN
+F 1 "Servo1" H 6880 1901 50  0000 L CNN
+F 2 "" H 6800 2000 50  0001 C CNN
+F 3 "" H 6800 2000 50  0001 C CNN
+1    6800 2000
+1    0    0    -1
+$EndComp
+Text GLabel 6600 1900 0    50   Input ~ 0
+PWM_SERVO0
+Text GLabel 6600 2000 0    50   Input ~ 0
+V5_SERVO
+Text GLabel 6600 2100 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x03 J502
+U 1 1 6467047E
+P 6800 2500
+F 0 "J502" H 6880 2492 50  0000 L CNN
+F 1 "Servo2" H 6880 2401 50  0000 L CNN
+F 2 "" H 6800 2500 50  0001 C CNN
+F 3 "" H 6800 2500 50  0001 C CNN
+1    6800 2500
+1    0    0    -1
+$EndComp
+Text GLabel 6600 2400 0    50   Input ~ 0
+PWM_SERVO1
+Text GLabel 6600 2500 0    50   Input ~ 0
+V5_SERVO
+Text GLabel 6600 2600 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x03 J503
+U 1 1 64670576
+P 6800 3000
+F 0 "J503" H 6880 2992 50  0000 L CNN
+F 1 "Servo3" H 6880 2901 50  0000 L CNN
+F 2 "" H 6800 3000 50  0001 C CNN
+F 3 "" H 6800 3000 50  0001 C CNN
+1    6800 3000
+1    0    0    -1
+$EndComp
+Text GLabel 6600 2900 0    50   Input ~ 0
+PWM_SERVO2
+Text GLabel 6600 3000 0    50   Input ~ 0
+V5_SERVO
+Text GLabel 6600 3100 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x03 J504
+U 1 1 6467067A
+P 6800 3500
+F 0 "J504" H 6880 3492 50  0000 L CNN
+F 1 "Servo4" H 6880 3401 50  0000 L CNN
+F 2 "" H 6800 3500 50  0001 C CNN
+F 3 "" H 6800 3500 50  0001 C CNN
+1    6800 3500
+1    0    0    -1
+$EndComp
+Text GLabel 6600 3400 0    50   Input ~ 0
+PWM_SERVO3
+Text GLabel 6600 3500 0    50   Input ~ 0
+V5_SERVO
+Text GLabel 6600 3600 0    50   Input ~ 0
+GND
+Text Notes 2200 3600 0    50   ~ 0
+Adresse PCA9685 mit A0-A5 konfigurieren (Default 0x40).
+Text GLabel 4200 3600 3    50   Input ~ 0
+GND
+Text GLabel 4000 3600 3    50   Input ~ 0
+V5_SERVO
+$EndSCHEMATC

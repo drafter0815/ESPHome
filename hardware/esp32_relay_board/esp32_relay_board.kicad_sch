@@ -1,0 +1,229 @@
+EESchema Schematic File Version 4
+LIBS:power
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 5
+Title "ESP32 Touch Relay Controller"
+Date "2024-05-19"
+Rev "A"
+Comp "Text-kompatible Vorlage"
+Comment1 "ESP32 + 3\" Touch + 16 Relais + 4 Servos"
+$EndDescr
+Text Notes 2200 1400 0    118  Italic 0
+Hierarchie uebersicht – die einzelnen Teilblaetter enthalten detaillierte Hinweise.
+$Sheet
+S 2200 1900 2400 1600
+U 6466B20B
+F0 "Power" 50
+F1 "power.kicad_sch" 50
+F2 "AC_L" I L 2200 2050 50 
+F3 "AC_N" I L 2200 2150 50 
+F4 "PE" I L 2200 2250 50 
+F5 "V12" O R 4600 2050 50 
+F6 "V5" O R 4600 2150 50 
+F7 "V3V3" O R 4600 2250 50 
+F8 "GND" O R 4600 2350 50 
+$EndSheet
+$Sheet
+S 5200 1900 2600 2000
+U 6466B235
+F0 "MCU_Display" 50
+F1 "mcu_display.kicad_sch" 50
+F2 "V3V3" I L 5200 2050 50 
+F3 "GND" I L 5200 2150 50 
+F4 "V5" I L 5200 2250 50 
+F5 "GPIO_RELAY0" O R 7800 1950 50 
+F6 "GPIO_RELAY1" O R 7800 2050 50 
+F7 "GPIO_RELAY2" O R 7800 2150 50 
+F8 "GPIO_RELAY3" O R 7800 2250 50 
+F9 "GPIO_RELAY4" O R 7800 2350 50 
+F10 "GPIO_RELAY5" O R 7800 2450 50 
+F11 "GPIO_RELAY6" O R 7800 2550 50 
+F12 "GPIO_RELAY7" O R 7800 2650 50 
+F13 "GPIO_RELAY8" O R 7800 2750 50 
+F14 "GPIO_RELAY9" O R 7800 2850 50 
+F15 "GPIO_RELAY10" O R 7800 2950 50 
+F16 "GPIO_RELAY11" O R 7800 3050 50 
+F17 "GPIO_RELAY12" O R 7800 3150 50 
+F18 "GPIO_RELAY13" O R 7800 3250 50 
+F19 "GPIO_RELAY14" O R 7800 3350 50 
+F20 "GPIO_RELAY15" O R 7800 3450 50 
+F21 "I2C_SDA" B R 7800 3650 50 
+F22 "I2C_SCL" B R 7800 3750 50 
+F23 "V5_SERVO" O R 7800 3950 50 
+F24 "PWM_SERVO0" O R 7800 4150 50 
+F25 "PWM_SERVO1" O R 7800 4250 50 
+F26 "PWM_SERVO2" O R 7800 4350 50 
+F27 "PWM_SERVO3" O R 7800 4450 50 
+$EndSheet
+$Sheet
+S 5200 4400 2400 1400
+U 6466B25F
+F0 "Servo_I2C" 50
+F1 "servo_i2c.kicad_sch" 50
+F2 "I2C_SDA" B L 5200 4550 50 
+F3 "I2C_SCL" B L 5200 4650 50 
+F4 "V3V3" I L 5200 4750 50 
+F5 "V5_SERVO" I L 5200 4850 50 
+F6 "GND" I L 5200 4950 50 
+F7 "PWM_SERVO0" O R 7600 4550 50 
+F8 "PWM_SERVO1" O R 7600 4650 50 
+F9 "PWM_SERVO2" O R 7600 4750 50 
+F10 "PWM_SERVO3" O R 7600 4850 50 
+$EndSheet
+$Sheet
+S 2200 4400 2600 2200
+U 6466B289
+F0 "Relays" 50
+F1 "relays.kicad_sch" 50
+F2 "GPIO_RELAY0" I L 2200 4550 50 
+F3 "GPIO_RELAY1" I L 2200 4650 50 
+F4 "GPIO_RELAY2" I L 2200 4750 50 
+F5 "GPIO_RELAY3" I L 2200 4850 50 
+F6 "GPIO_RELAY4" I L 2200 4950 50 
+F7 "GPIO_RELAY5" I L 2200 5050 50 
+F8 "GPIO_RELAY6" I L 2200 5150 50 
+F9 "GPIO_RELAY7" I L 2200 5250 50 
+F10 "GPIO_RELAY8" I L 2200 5350 50 
+F11 "GPIO_RELAY9" I L 2200 5450 50 
+F12 "GPIO_RELAY10" I L 2200 5550 50 
+F13 "GPIO_RELAY11" I L 2200 5650 50 
+F14 "GPIO_RELAY12" I L 2200 5750 50 
+F15 "GPIO_RELAY13" I L 2200 5850 50 
+F16 "GPIO_RELAY14" I L 2200 5950 50 
+F17 "GPIO_RELAY15" I L 2200 6050 50 
+F18 "V12" I L 2200 6150 50 
+F19 "V5" I L 2200 6250 50 
+F20 "GND" I L 2200 6350 50 
+F21 "LOAD_COM0" O R 4800 4550 50 
+F22 "LOAD_COM1" O R 4800 4650 50 
+F23 "LOAD_COM2" O R 4800 4750 50 
+F24 "LOAD_COM3" O R 4800 4850 50 
+$EndSheet
+Text GLabel 2000 2050 0    50   Input ~ 0
+AC_L
+Text GLabel 2000 2150 0    50   Input ~ 0
+AC_N
+Text GLabel 2000 2250 0    50   Input ~ 0
+PE
+Text GLabel 4800 2050 2    50   Output ~ 0
+V12
+Text GLabel 4800 2150 2    50   Output ~ 0
+V5
+Text GLabel 4800 2250 2    50   Output ~ 0
+V3V3
+Text GLabel 4800 2350 2    50   Output ~ 0
+GND
+Text GLabel 5000 2050 0    50   Input ~ 0
+V3V3
+Text GLabel 5000 2150 0    50   Input ~ 0
+GND
+Text GLabel 5000 2250 0    50   Input ~ 0
+V5
+Text Notes 5400 1700 0    50   ~ 0
+ESP32 sheet verteilt 16 Relaistreiber-Signale und Servopfade.
+Text GLabel 8000 1950 2    50   Output ~ 0
+GPIO_RELAY0
+Text GLabel 8000 2050 2    50   Output ~ 0
+GPIO_RELAY1
+Text GLabel 8000 2150 2    50   Output ~ 0
+GPIO_RELAY2
+Text GLabel 8000 2250 2    50   Output ~ 0
+GPIO_RELAY3
+Text GLabel 8000 2350 2    50   Output ~ 0
+GPIO_RELAY4
+Text GLabel 8000 2450 2    50   Output ~ 0
+GPIO_RELAY5
+Text GLabel 8000 2550 2    50   Output ~ 0
+GPIO_RELAY6
+Text GLabel 8000 2650 2    50   Output ~ 0
+GPIO_RELAY7
+Text GLabel 8000 2750 2    50   Output ~ 0
+GPIO_RELAY8
+Text GLabel 8000 2850 2    50   Output ~ 0
+GPIO_RELAY9
+Text GLabel 8000 2950 2    50   Output ~ 0
+GPIO_RELAY10
+Text GLabel 8000 3050 2    50   Output ~ 0
+GPIO_RELAY11
+Text GLabel 8000 3150 2    50   Output ~ 0
+GPIO_RELAY12
+Text GLabel 8000 3250 2    50   Output ~ 0
+GPIO_RELAY13
+Text GLabel 8000 3350 2    50   Output ~ 0
+GPIO_RELAY14
+Text GLabel 8000 3450 2    50   Output ~ 0
+GPIO_RELAY15
+Text GLabel 2000 4550 0    50   Input ~ 0
+GPIO_RELAY0
+Text GLabel 2000 4650 0    50   Input ~ 0
+GPIO_RELAY1
+Text GLabel 2000 4750 0    50   Input ~ 0
+GPIO_RELAY2
+Text GLabel 2000 4850 0    50   Input ~ 0
+GPIO_RELAY3
+Text GLabel 2000 4950 0    50   Input ~ 0
+GPIO_RELAY4
+Text GLabel 2000 5050 0    50   Input ~ 0
+GPIO_RELAY5
+Text GLabel 2000 5150 0    50   Input ~ 0
+GPIO_RELAY6
+Text GLabel 2000 5250 0    50   Input ~ 0
+GPIO_RELAY7
+Text GLabel 2000 5350 0    50   Input ~ 0
+GPIO_RELAY8
+Text GLabel 2000 5450 0    50   Input ~ 0
+GPIO_RELAY9
+Text GLabel 2000 5550 0    50   Input ~ 0
+GPIO_RELAY10
+Text GLabel 2000 5650 0    50   Input ~ 0
+GPIO_RELAY11
+Text GLabel 2000 5750 0    50   Input ~ 0
+GPIO_RELAY12
+Text GLabel 2000 5850 0    50   Input ~ 0
+GPIO_RELAY13
+Text GLabel 2000 5950 0    50   Input ~ 0
+GPIO_RELAY14
+Text GLabel 2000 6050 0    50   Input ~ 0
+GPIO_RELAY15
+Text GLabel 2000 6150 0    50   Input ~ 0
+V12
+Text GLabel 2000 6250 0    50   Input ~ 0
+V5
+Text GLabel 2000 6350 0    50   Input ~ 0
+GND
+Text GLabel 5000 4550 0    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 5000 4650 0    50   BiDi ~ 0
+I2C_SCL
+Text GLabel 5000 4750 0    50   Input ~ 0
+V3V3
+Text GLabel 5000 4850 0    50   Input ~ 0
+V5_SERVO
+Text GLabel 5000 4950 0    50   Input ~ 0
+GND
+Text GLabel 7800 4550 2    50   Output ~ 0
+PWM_SERVO0
+Text GLabel 7800 4650 2    50   Output ~ 0
+PWM_SERVO1
+Text GLabel 7800 4750 2    50   Output ~ 0
+PWM_SERVO2
+Text GLabel 7800 4850 2    50   Output ~ 0
+PWM_SERVO3
+Text GLabel 2000 3950 0    50   Output ~ 0
+LOAD_COM0
+Text GLabel 2000 4050 0    50   Output ~ 0
+LOAD_COM1
+Text GLabel 2000 4150 0    50   Output ~ 0
+LOAD_COM2
+Text GLabel 2000 4250 0    50   Output ~ 0
+LOAD_COM3
+Text GLabel 8000 3650 2    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 8000 3750 2    50   BiDi ~ 0
+I2C_SCL
+Text GLabel 8000 3950 2    50   Output ~ 0
+V5_SERVO
+$EndSCHEMATC

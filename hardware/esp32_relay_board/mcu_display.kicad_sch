@@ -1,0 +1,151 @@
+EESchema Schematic File Version 4
+LIBS:Connector_Generic
+LIBS:RF_Module
+LIBS:power
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 3 5
+Title "MCU & Display"
+Comment1 "ESP32-WROOM-32 mit 3\" Touch-TFT"
+$EndDescr
+Text Notes 2200 1400 0    118  ~ 0
+ESP32 verbunden mit SPI-Touchdisplay und I2C-Bus.
+$Comp
+L RF_Module:ESP32-WROOM-32 U301
+U 1 1 6466D80F
+P 3600 2600
+F 0 "U301" H 3600 4015 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 3600 3924 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 3600 1100 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 3300 3950 50  0001 C CNN
+1    3600 2600
+1    0    0    -1
+$EndComp
+Text GLabel 2700 1600 0    50   Input ~ 0
+V3V3
+Wire Wire Line
+2700 1600 3000 1600
+Text GLabel 2700 1700 0    50   Input ~ 0
+GND
+Wire Wire Line
+2700 1700 3000 1700
+Text GLabel 2700 2000 0    50   Input ~ 0
+V5
+Text Notes 2200 3300 0    50   ~ 0
+GPIO 25-27 fuer SPI TFT, GPIO 32/33 fuer Touch.
+Text GLabel 4500 2300 2    50   Output ~ 0
+GPIO_RELAY0
+Text GLabel 4500 2400 2    50   Output ~ 0
+GPIO_RELAY1
+Text GLabel 4500 2500 2    50   Output ~ 0
+GPIO_RELAY2
+Text GLabel 4500 2600 2    50   Output ~ 0
+GPIO_RELAY3
+Text GLabel 4500 2700 2    50   Output ~ 0
+GPIO_RELAY4
+Text GLabel 4500 2800 2    50   Output ~ 0
+GPIO_RELAY5
+Text GLabel 4500 2900 2    50   Output ~ 0
+GPIO_RELAY6
+Text GLabel 4500 3000 2    50   Output ~ 0
+GPIO_RELAY7
+Text Notes 4600 3050 0    50   ~ 0
+Restliche Relaispins ueber Erweiterungsport definieren.
+Text GLabel 5400 3100 2    50   Output ~ 0
+GPIO_RELAY8
+Text GLabel 5400 3200 2    50   Output ~ 0
+GPIO_RELAY9
+Text GLabel 5400 3300 2    50   Output ~ 0
+GPIO_RELAY10
+Text GLabel 5400 3400 2    50   Output ~ 0
+GPIO_RELAY11
+Text GLabel 5400 3500 2    50   Output ~ 0
+GPIO_RELAY12
+Text GLabel 5400 3600 2    50   Output ~ 0
+GPIO_RELAY13
+Text GLabel 5400 3700 2    50   Output ~ 0
+GPIO_RELAY14
+Text GLabel 5400 3800 2    50   Output ~ 0
+GPIO_RELAY15
+Text GLabel 4500 2000 2    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 4500 2100 2    50   BiDi ~ 0
+I2C_SCL
+Text GLabel 4500 1800 2    50   Output ~ 0
+PWM_SERVO0
+Text GLabel 4500 1900 2    50   Output ~ 0
+PWM_SERVO1
+Text GLabel 2700 2400 0    50   Output ~ 0
+PWM_SERVO2
+Text GLabel 2700 2500 0    50   Output ~ 0
+PWM_SERVO3
+Text Notes 5400 1700 0    50   ~ 0
+TFT (SPI):
+GPIO 23 -> MOSI
+GPIO 19 -> MISO
+GPIO 18 -> SCLK
+GPIO 5  -> TFT_CS
+GPIO 21 -> TOUCH_IRQ
+Text Notes 5400 2300 0    50   ~ 0
+GPIO8..15 via IO-Expander
+Wire Bus Line
+5400 2300 6200 2300
+Wire Bus Line
+6200 2300 6200 2700
+Text Notes 5400 2800 0    50   ~ 0
+Siehe NOTES.md fuer Pinmapping und Busaufteilung.
+Text GLabel 2700 2100 0    50   Output ~ 0
+V5_SERVO
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J301
+U 1 1 6466E00A
+P 7200 2500
+F 0 "J301" H 7250 2817 50  0000 C CNN
+F 1 "Display_SPI" H 7250 2726 50  0000 C CNN
+F 2 "" H 7200 2500 50  0001 C CNN
+F 3 "" H 7200 2500 50  0001 C CNN
+1    7200 2500
+1    0    0    -1
+$EndComp
+Text GLabel 7000 2300 0    50   Input ~ 0
+V3V3
+Text GLabel 7000 2400 0    50   Input ~ 0
+GND
+Text GLabel 7000 2500 0    50   Input ~ 0
+SPI_MOSI
+Text GLabel 7000 2600 0    50   Input ~ 0
+SPI_SCLK
+Text GLabel 7000 2700 0    50   Input ~ 0
+TFT_CS
+Text GLabel 7500 2500 2    50   Input ~ 0
+SPI_MISO
+Text GLabel 7500 2600 2    50   Input ~ 0
+TOUCH_IRQ
+Text GLabel 7500 2700 2    50   Input ~ 0
+TOUCH_CS
+Text Notes 6500 3200 0    50   ~ 0
+Verbinde Touch-Controller via SPI oder I2C gemäss Display-Datenblatt.
+$Comp
+L Connector_Generic:Conn_01x04 J302
+U 1 1 6466E5E1
+P 5200 4200
+F 0 "J302" H 5280 4192 50  0000 L CNN
+F 1 "I2C_EXP" H 5280 4101 50  0000 L CNN
+F 2 "" H 5200 4200 50  0001 C CNN
+F 3 "" H 5200 4200 50  0001 C CNN
+1    5200 4200
+1    0    0    -1
+$EndComp
+Text GLabel 5000 4100 0    50   BiDi ~ 0
+I2C_SCL
+Text GLabel 5000 4200 0    50   BiDi ~ 0
+I2C_SDA
+Text GLabel 5000 4300 0    50   Input ~ 0
+V3V3
+Text GLabel 5000 4400 0    50   Input ~ 0
+GND
+Text Notes 2200 3800 0    50   ~ 0
+Erweitere GPIO8..15 bei Bedarf via IO-Expander (z.B. MCP23017).
+$EndSCHEMATC
