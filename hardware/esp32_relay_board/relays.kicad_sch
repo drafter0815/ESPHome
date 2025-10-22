@@ -1,0 +1,197 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 4 5
+Title "Relaisbaugruppe"
+Comment1 "16 Optokoppler + Relais"
+$EndDescr
+Text Notes 2200 1400 0    118  ~ 0
+Zwei 8-Kanal Treiberstränge mit Optokopplern und Schraubklemmen.
+$Comp
+L Transistor_Array:ULN2803A U401
+U 1 1 6466ED9E
+P 4200 2600
+F 0 "U401" H 4200 3365 50  0000 C CNN
+F 1 "ULN2803A" H 4200 3274 50  0000 C CNN
+F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 4250 1950 50  0001 L CIN
+F 3 "https://www.ti.com/lit/ds/symlink/uln2803a.pdf" H 4300 3100 50  0001 C CNN
+1    4200 2600
+1    0    0    -1
+$EndComp
+$Comp
+L Transistor_Array:ULN2803A U402
+U 1 1 6466EE4C
+P 4200 4600
+F 0 "U402" H 4200 5365 50  0000 C CNN
+F 1 "ULN2803A" H 4200 5274 50  0000 C CNN
+F 2 "Package_SO:SOIC-18W_7.5x11.6mm_P1.27mm" H 4250 3950 50  0001 L CIN
+F 3 "https://www.ti.com/lit/ds/symlink/uln2803a.pdf" H 4300 5100 50  0001 C CNN
+1    4200 4600
+1    0    0    -1
+$EndComp
+Text GLabel 3400 2100 0    50   Input ~ 0
+GPIO_RELAY0
+Text GLabel 3400 2200 0    50   Input ~ 0
+GPIO_RELAY1
+Text GLabel 3400 2300 0    50   Input ~ 0
+GPIO_RELAY2
+Text GLabel 3400 2400 0    50   Input ~ 0
+GPIO_RELAY3
+Text GLabel 3400 2500 0    50   Input ~ 0
+GPIO_RELAY4
+Text GLabel 3400 2600 0    50   Input ~ 0
+GPIO_RELAY5
+Text GLabel 3400 2700 0    50   Input ~ 0
+GPIO_RELAY6
+Text GLabel 3400 2800 0    50   Input ~ 0
+GPIO_RELAY7
+Text GLabel 3400 4100 0    50   Input ~ 0
+GPIO_RELAY8
+Text GLabel 3400 4200 0    50   Input ~ 0
+GPIO_RELAY9
+Text GLabel 3400 4300 0    50   Input ~ 0
+GPIO_RELAY10
+Text GLabel 3400 4400 0    50   Input ~ 0
+GPIO_RELAY11
+Text GLabel 3400 4500 0    50   Input ~ 0
+GPIO_RELAY12
+Text GLabel 3400 4600 0    50   Input ~ 0
+GPIO_RELAY13
+Text GLabel 3400 4700 0    50   Input ~ 0
+GPIO_RELAY14
+Text GLabel 3400 4800 0    50   Input ~ 0
+GPIO_RELAY15
+Text GLabel 3400 3100 0    50   Input ~ 0
+V5
+Text GLabel 3400 5100 0    50   Input ~ 0
+V5
+Text GLabel 4200 3400 3    50   Input ~ 0
+GND
+Text GLabel 4200 5400 3    50   Input ~ 0
+GND
+$Comp
+L Device:Relay_SPDT K401
+U 1 1 6466F120
+P 6400 2200
+F 0 "K401" H 6850 2350 50  0000 C CNN
+F 1 "Relay_1" H 6850 2260 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_Songle_SRD_Series" H 6750 2150 50  0001 L CIN
+F 3 "" H 6400 2200 50  0001 C CNN
+1    6400 2200
+1    0    0    -1
+$EndComp
+Text GLabel 6000 2050 0    50   Input ~ 0
+V12
+Text GLabel 6000 2350 0    50   Input ~ 0
+DRV1
+Text Notes 5800 1800 0    50   ~ 0
+Optokoppler vor ULN2803A einplanen (z.B. PC817).
+$Comp
+L Connector_Generic:Conn_01x03 J401
+U 1 1 6466F496
+P 7600 2200
+F 0 "J401" H 7680 2192 50  0000 L CNN
+F 1 "LOAD1" H 7680 2101 50  0000 L CNN
+F 2 "" H 7600 2200 50  0001 C CNN
+F 3 "" H 7600 2200 50  0001 C CNN
+1    7600 2200
+1    0    0    -1
+$EndComp
+Text GLabel 7400 2100 0    50   Input ~ 0
+LOAD_COM0
+Text GLabel 7400 2200 0    50   Input ~ 0
+NO1
+Text GLabel 7400 2300 0    50   Input ~ 0
+NC1
+Text Notes 5800 3500 0    50   ~ 0
+K402-K408 analog aufbauen und verdrahten.
+Text GLabel 5200 2100 2    50   Output ~ 0
+DRV1
+Text GLabel 5200 2200 2    50   Output ~ 0
+DRV2
+Text GLabel 5200 2300 2    50   Output ~ 0
+DRV3
+Text GLabel 5200 2400 2    50   Output ~ 0
+DRV4
+Text GLabel 5200 2500 2    50   Output ~ 0
+DRV5
+Text GLabel 5200 2600 2    50   Output ~ 0
+DRV6
+Text GLabel 5200 2700 2    50   Output ~ 0
+DRV7
+Text GLabel 5200 2800 2    50   Output ~ 0
+DRV8
+Text GLabel 5200 4100 2    50   Output ~ 0
+DRV9
+Text GLabel 5200 4200 2    50   Output ~ 0
+DRV10
+Text GLabel 5200 4300 2    50   Output ~ 0
+DRV11
+Text GLabel 5200 4400 2    50   Output ~ 0
+DRV12
+Text GLabel 5200 4500 2    50   Output ~ 0
+DRV13
+Text GLabel 5200 4600 2    50   Output ~ 0
+DRV14
+Text GLabel 5200 4700 2    50   Output ~ 0
+DRV15
+Text GLabel 5200 4800 2    50   Output ~ 0
+DRV16
+Text Notes 2200 5600 0    50   ~ 0
+Treiber-Ausgänge DRV1..DRV16 gehen zu den Relais-Spulen.
+Text GLabel 6000 4800 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x03 J402
+U 1 1 64670E45
+P 7600 2800
+F 0 "J402" H 7680 2792 50  0000 L CNN
+F 1 "LOAD2" H 7680 2701 50  0000 L CNN
+F 2 "" H 7600 2800 50  0001 C CNN
+F 3 "" H 7600 2800 50  0001 C CNN
+1    7600 2800
+1    0    0    -1
+$EndComp
+Text GLabel 7400 2700 0    50   Input ~ 0
+LOAD_COM1
+Text GLabel 7400 2800 0    50   Input ~ 0
+NO5
+Text GLabel 7400 2900 0    50   Input ~ 0
+NC5
+$Comp
+L Connector_Generic:Conn_01x03 J403
+U 1 1 64670F32
+P 7600 3400
+F 0 "J403" H 7680 3392 50  0000 L CNN
+F 1 "LOAD3" H 7680 3301 50  0000 L CNN
+F 2 "" H 7600 3400 50  0001 C CNN
+F 3 "" H 7600 3400 50  0001 C CNN
+1    7600 3400
+1    0    0    -1
+$EndComp
+Text GLabel 7400 3300 0    50   Input ~ 0
+LOAD_COM2
+Text GLabel 7400 3400 0    50   Input ~ 0
+NO9
+Text GLabel 7400 3500 0    50   Input ~ 0
+NC9
+$Comp
+L Connector_Generic:Conn_01x03 J404
+U 1 1 6467101E
+P 7600 4000
+F 0 "J404" H 7680 3992 50  0000 L CNN
+F 1 "LOAD4" H 7680 3901 50  0000 L CNN
+F 2 "" H 7600 4000 50  0001 C CNN
+F 3 "" H 7600 4000 50  0001 C CNN
+1    7600 4000
+1    0    0    -1
+$EndComp
+Text GLabel 7400 3900 0    50   Input ~ 0
+LOAD_COM3
+Text GLabel 7400 4000 0    50   Input ~ 0
+NO13
+Text GLabel 7400 4100 0    50   Input ~ 0
+NC13
+$EndSCHEMATC

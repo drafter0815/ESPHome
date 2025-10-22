@@ -1,0 +1,113 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 2 5
+Title "Netzteil"
+Comment1 "230VAC -> 12V / 5V / 3V3"
+$EndDescr
+Text Notes 2100 1400 0    118  ~ 0
+Versorgungspfad mit getrennter Primär- und Sekundärseite.
+$Comp
+L Connector_Generic:Conn_01x03 J201
+U 1 1 6466C8A1
+P 2600 2200
+F 0 "J201" H 2680 2192 50  0000 L CNN
+F 1 "AC_IN" H 2680 2101 50  0000 L CNN
+F 2 "" H 2600 2200 50  0001 C CNN
+F 3 "" H 2600 2200 50  0001 C CNN
+1    2600 2200
+1    0    0    -1
+$EndComp
+Text Notes 3000 2200 0    50   ~ 0
+L  -> Sicherung -> Varistor -> AC/DC Modul
+Text GLabel 2400 2100 0    50   Input ~ 0
+AC_L
+Text GLabel 2400 2200 0    50   Input ~ 0
+AC_N
+Text GLabel 2400 2300 0    50   Input ~ 0
+PE
+$Comp
+L Converter_ACDC:IRM-20-12 PS201
+U 1 1 6466C9E4
+P 4000 2100
+F 0 "PS201" H 4000 2497 50  0000 C CNN
+F 1 "IRM-20-12" H 4000 2406 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_MeanWell_IRM-20-xx_THT" H 4000 1800 50  0001 C CNN
+F 3 "https://www.meanwell.com/Upload/PDF/IRM-20/IRM-20-SPEC.PDF" H 4000 2100 50  0001 C CNN
+1    4000 2100
+1    0    0    -1
+$EndComp
+Wire Wire Line
+2800 2100 3500 2100
+Wire Wire Line
+2800 2200 3500 2200
+Wire Wire Line
+2800 2300 3500 2300
+Text Notes 4600 1850 0    50   ~ 0
+12V@1.7A Ausgang – Reserven fuer Relais und Servos bereitstellen.
+Text GLabel 4500 2100 2    50   Output ~ 0
+V12
+Text GLabel 4500 2200 2    50   Output ~ 0
+GND
+$Comp
+L Regulator_Switching:MP1584EN U202
+U 1 1 6466CC4B
+P 5800 2100
+F 0 "U202" H 5800 2467 50  0000 C CNN
+F 1 "Step-Down 12V->5V" H 5800 2376 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5800 1750 50  0001 C CNN
+F 3 "https://www.monolithicpower.com/pub/media/document/MP1584_r1.1.pdf" H 5800 2100 50  0001 C CNN
+1    5800 2100
+1    0    0    -1
+$EndComp
+Wire Wire Line
+4500 2100 5200 2100
+Wire Wire Line
+4500 2200 5200 2200
+Text GLabel 6400 2100 2    50   Output ~ 0
+V5
+Text GLabel 6400 2200 2    50   Output ~ 0
+GND
+$Comp
+L Regulator_Linear:AMS1117-3.3 U203
+U 1 1 6466CE6D
+P 7600 2100
+F 0 "U203" H 7600 2350 50  0000 C CNN
+F 1 "LDO 5V->3V3" H 7600 2259 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 7600 2300 50  0001 C CNN
+F 3 "https://www.advanced-monolithic.com/pdf/ds1117.pdf" H 7600 2100 50  0001 C CNN
+1    7600 2100
+1    0    0    -1
+$EndComp
+Wire Wire Line
+6400 2100 7000 2100
+Wire Wire Line
+6400 2200 7000 2200
+Text GLabel 8200 2100 2    50   Output ~ 0
+V3V3
+Text GLabel 8200 2200 2    50   Output ~ 0
+GND
+Text Notes 5100 2700 0    50   ~ 0
+Füge Filter, TVS-Dioden und Sicherungen je nach Norm hinzu.
+$Comp
+L Connector_Generic:Conn_01x04 J202
+U 1 1 6466D0D2
+P 9000 2150
+F 0 "J202" H 9080 2142 50  0000 L CNN
+F 1 "DC_Bus" H 9080 2051 50  0000 L CNN
+F 2 "" H 9000 2150 50  0001 C CNN
+F 3 "" H 9000 2150 50  0001 C CNN
+1    9000 2150
+1    0    0    -1
+$EndComp
+Text GLabel 8800 2050 0    50   Input ~ 0
+V12
+Text GLabel 8800 2150 0    50   Input ~ 0
+V5
+Text GLabel 8800 2250 0    50   Input ~ 0
+V3V3
+Text GLabel 8800 2350 0    50   Input ~ 0
+GND
+$EndSCHEMATC
