@@ -1,0 +1,11 @@
+(sym_lib_table
+  (lib (name "Connector_Generic")(type "KiCad")(uri "/usr/share/kicad/symbols/Connector_Generic.kicad_sym")(options "")(descr ""))
+  (lib (name "Converter_ACDC")(type "KiCad")(uri "/usr/share/kicad/symbols/Converter_ACDC.kicad_sym")(options "")(descr ""))
+  (lib (name "Regulator_Linear")(type "KiCad")(uri "/usr/share/kicad/symbols/Regulator_Linear.kicad_sym")(options "")(descr ""))
+  (lib (name "Regulator_Switching")(type "KiCad")(uri "/usr/share/kicad/symbols/Regulator_Switching.kicad_sym")(options "")(descr ""))
+  (lib (name "power")(type "KiCad")(uri "/usr/share/kicad/symbols/power.kicad_sym")(options "")(descr ""))
+  (lib (name "RF_Module")(type "KiCad")(uri "/usr/share/kicad/symbols/RF_Module.kicad_sym")(options "")(descr ""))
+  (lib (name "Driver_LED")(type "KiCad")(uri "/usr/share/kicad/symbols/Driver_LED.kicad_sym")(options "")(descr ""))
+  (lib (name "Transistor_Array")(type "KiCad")(uri "/usr/share/kicad/symbols/Transistor_Array.kicad_sym")(options "")(descr ""))
+  (lib (name "Device")(type "KiCad")(uri "/usr/share/kicad/symbols/Device.kicad_sym")(options "")(descr ""))
+)
